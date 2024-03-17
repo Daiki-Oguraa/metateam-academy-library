@@ -7,7 +7,7 @@ import java.text.SimpleDateFormat;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service; 
 import org.springframework.web.multipart.MultipartFile;
 
 import io.minio.GetPresignedObjectUrlArgs;
@@ -22,7 +22,7 @@ import jp.co.seattle.library.config.MinioConfig;
  * 
  * サムネイルに関してS3とのやりとりの処理を実装する
  */
-@Controller
+@Service
 public class ThumbnailService {
 	final static Logger logger = LoggerFactory.getLogger(ThumbnailService.class);
 

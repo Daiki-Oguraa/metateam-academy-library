@@ -21,7 +21,7 @@ import jp.co.seattle.library.service.BooksService;
 import jp.co.seattle.library.service.ThumbnailService;
 
 /**
- * Handles requests for the application home page.
+ * 書籍の追加に関するリクエストを処理するコントローラー
  */
 @Controller // APIの入り口
 public class AddBooksController {
@@ -36,7 +36,7 @@ public class AddBooksController {
 
 	@RequestMapping(value = "/addBook", method = RequestMethod.GET) // value＝actionで指定したパラメータ
 	// RequestParamでname属性を取得
-	public String login(Model model) {
+	public String showAddBookForm(Model model) {
 		return "addBook";
 	}
 
